@@ -20,7 +20,6 @@ function App() {
       <HotKeys />
       <SW />
       <BrowserRouter basename={process.env.PUBLIC_URL}>
-        n
         <Header />
         <Sidebar />
         <Pages />
