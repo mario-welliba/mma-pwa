@@ -2,7 +2,8 @@
   "name": "react-pwa",
   "version": "2.0.2",
   "description": "Starter kit for modern web applications",
-  "homepage": "https://mario-welliba.github.io/mma-pwa",
+  "homepage": "https://mario-welliba.github.io/mma-pwa/",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/suren-atoyan/react-pwa.git"
