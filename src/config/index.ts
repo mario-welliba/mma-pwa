@@ -2,7 +2,7 @@ import isMobile from '@/utils/is-mobile';
 
 import type { Notifications } from './types';
 
-const title = 'welliba PWA!';
+const title = 'welliba - lounge PWA';
 
 const email = 'auther-email@gmail.com';
 
