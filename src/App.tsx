@@ -19,7 +19,7 @@ function App() {
       <Notifications />
       <HotKeys />
       <SW />
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter>
         <Header />
         <Sidebar />
         <Pages />
