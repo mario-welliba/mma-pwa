@@ -19,7 +19,8 @@ function App() {
       <Notifications />
       <HotKeys />
       <SW />
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        n
         <Header />
         <Sidebar />
         <Pages />
