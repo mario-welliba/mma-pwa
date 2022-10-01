@@ -1,5 +1,5 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
 import ThemeIcon from '@mui/icons-material/InvertColors';
+import Logout from '@mui/icons-material/Logout';
 import MenuIcon from '@mui/icons-material/Menu';
 import Alert from '@mui/material/Alert';
 import AlertTitle from '@mui/material/AlertTitle';
@@ -11,8 +11,10 @@ import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 
+import { useSignOut } from '@nhost/react';
+
 import { FlexBox } from '@/components/styled';
-import { repository, title } from '@/config';
+import { title } from '@/config';
 import useHotKeysDialog from '@/store/hotkeys';
 import useNotifications from '@/store/notifications';
 import useSidebar from '@/store/sidebar';
@@ -26,6 +28,7 @@ function Header() {
   const [, themeActions] = useTheme();
   const [, notificationsActions] = useNotifications();
   const [, hotKeysDialogActions] = useHotKeysDialog();
+  const { signOut } = useSignOut();
 
   function showNotification() {
     notificationsActions.push({
@@ -80,9 +83,9 @@ function Header() {
               </Tooltip>
             </FlexBox>
             <Divider orientation="vertical" flexItem />
-            <Tooltip title="It's open source" arrow>
-              <IconButton color="info" size="large" component="a" href={repository} target="_blank">
-                <GitHubIcon />
+            <Tooltip title="Logout" arrow>
+              <IconButton color="info" size="large" component="a" target="_blank" onClick={signOut}>
+                <Logout />
               </IconButton>
             </Tooltip>
             <Divider orientation="vertical" flexItem />
