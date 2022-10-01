@@ -19,7 +19,7 @@ function App() {
       <Notifications />
       <HotKeys />
       <SW />
-      <BrowserRouter basename="mma-pwa">
+      <BrowserRouter>
         <Header />
         <Sidebar />
         <Pages />
