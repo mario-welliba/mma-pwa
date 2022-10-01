@@ -4,7 +4,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 import { useAuthenticationStatus } from '@nhost/react';
 
 type ProtectedRouteProps = {
-  children: JSX.Element;
+  children: React.ReactNode;
 };
 
 function ProtectedRoute({ children }: ProtectedRouteProps) {
