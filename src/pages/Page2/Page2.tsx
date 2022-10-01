@@ -29,7 +29,7 @@ function Page2() {
         <QueryResult error={error} loading={loading} data={data}>
           {data?.todos.map((todos: Todo) => (
             <Card sx={{ minWidth: 345 }} key={todos.id}>
-              <CardHeader>{todos.title}</CardHeader>
+              <CardHeader title={todos.title}></CardHeader>
               <CardContent>{todos.text}</CardContent>
             </Card>
           ))}
