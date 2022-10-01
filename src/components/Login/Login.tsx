@@ -38,7 +38,9 @@ function Login() {
             id="password"
             label="Password"
             variant="standard"
+            type="password"
             margin="normal"
+            autoComplete="current-password"
             onChange={(e) => setPassword(e.target.value)}
           />
           <Button type="submit" variant="contained">
