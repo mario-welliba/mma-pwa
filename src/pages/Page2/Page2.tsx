@@ -1,7 +1,6 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/system/Box';
 
 import { gql, useQuery } from '@apollo/client';
@@ -26,19 +25,17 @@ function Page2() {
   return (
     <>
       <Meta title="page 2" />
-      <Box sx={{ width: '100%' }}>
-        <Grid container rowSpacing={1} columnSpacing={1}>
-          <QueryResult error={error} loading={loading} data={data}>
-            {data?.todos.map((todos: Todo) => (
-              <Grid key={todos.id} item xs={3}>
-                <Card key={todos.id}>
-                  <CardHeader title={todos.title}></CardHeader>
-                  <CardContent>{todos.text}</CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </QueryResult>
-        </Grid>
+      <Box p={4} width={1} sx={{ display: 'flex', flexWrap: 'wrap' }}>
+        <QueryResult error={error} loading={loading} data={data}>
+          {data?.todos.map((todos: Todo) => (
+            <Box key={todos.id} p={1} width={0.3} sx={{ minWidth: '300px' }}>
+              <Card key={todos.id}>
+                <CardHeader title={todos.title}></CardHeader>
+                <CardContent>{todos.text}</CardContent>
+              </Card>
+            </Box>
+          ))}
+        </QueryResult>
       </Box>
     </>
   );
