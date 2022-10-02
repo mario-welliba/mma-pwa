@@ -5,10 +5,4 @@ type Notifications = {
   maxSnack: number;
 };
 
-type Todo = {
-  id: string;
-  title: string;
-  text: string;
-};
-
-export type { Notifications, Todo };
+export type { Notifications };

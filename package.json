@@ -20,12 +20,16 @@
     "https-preview": "serve dist",
     "prepare": "husky install",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -f"
+    "deploy": "gh-pages -d dist -f",
+    "codegen": "graphql-codegen --config graphql.config.yaml --errors-only"
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@graphql-codegen/cli": "^2.13.1",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.3",
     "@mui/icons-material": "^5.8.0",
     "@mui/lab": "^5.0.0-alpha.83",
     "@mui/material": "^5.8.1",
