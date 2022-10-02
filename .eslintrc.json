@@ -9,7 +9,11 @@
     "plugin:@typescript-eslint/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["react", "react-hooks", "@typescript-eslint"],
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -21,5 +25,8 @@
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
-  }
+  },
+  "ignorePatterns": [
+    "**/__generated__/*.ts"
+  ]
 }

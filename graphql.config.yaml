@@ -1,0 +1,14 @@
+schema:
+  - https://filjkngpdsoyrxndnepq.nhost.run/v1/graphql:
+      headers:
+        x-hasura-admin-secret: "d117e8838308a1ad1d0c0953816fd41b"
+documents:
+  - "src/**/*.graphql"
+generates:
+  src/utils/__generated__/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withRefetchFn: true
